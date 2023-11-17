@@ -2,10 +2,10 @@ package raa.example.pictureandrest.domain.useCases
 
 import android.media.Image
 
-class GetImageUseCase {
+class GetImageUseCase(private val repository: ImageCardRepository) {
 
     fun execute(url: String): Image{
-        return TODO("Provide the return value")
+        return repository.getImage(url)
     }
 
 }

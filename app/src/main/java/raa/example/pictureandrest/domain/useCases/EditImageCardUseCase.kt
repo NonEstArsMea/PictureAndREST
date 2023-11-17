@@ -1,9 +1,11 @@
 package raa.example.pictureandrest.domain.useCases
 
-class EditImageCardUseCase{
+import raa.example.pictureandrest.domain.dataClass.ImageCard
 
-    fun execute(id: Int){
+class EditImageCardUseCase(private val repository: ImageCardRepository){
 
+    fun execute(newImageCard: ImageCard){
+        repository.editImageCard(newImageCard)
     }
 
 }
